@@ -13,8 +13,8 @@
 		549DC1BE1FB17CDE004B918C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 549DC1BD1FB17CDE004B918C /* Assets.xcassets */; };
 		549DC1C11FB17CDE004B918C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 549DC1BF1FB17CDE004B918C /* LaunchScreen.storyboard */; };
 		549DC1C91FB17ED1004B918C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549DC1C81FB17ED1004B918C /* Song.swift */; };
-		81CF14C21FB249CC004A9A7A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF14C11FB249CC004A9A7A /* SettingViewController.swift */; };
 		81CF14C51FB24D0F004A9A7A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF14C41FB24D0F004A9A7A /* Settings.swift */; };
+		81CF14C81FB25101004A9A7A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF14C71FB25101004A9A7A /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		549DC1C01FB17CDE004B918C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		549DC1C21FB17CDE004B918C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		549DC1C81FB17ED1004B918C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		81CF14C11FB249CC004A9A7A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = "LifecycleControls/New Group/SettingViewController.swift"; sourceTree = SOURCE_ROOT; };
 		81CF14C41FB24D0F004A9A7A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		81CF14C71FB25101004A9A7A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				549DC1B81FB17CDE004B918C /* ViewController.swift */,
-				81CF14C11FB249CC004A9A7A /* SettingViewController.swift */,
+				81CF14C71FB25101004A9A7A /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 				549DC1C91FB17ED1004B918C /* Song.swift in Sources */,
 				549DC1B91FB17CDE004B918C /* ViewController.swift in Sources */,
 				549DC1B71FB17CDE004B918C /* AppDelegate.swift in Sources */,
-				81CF14C21FB249CC004A9A7A /* SettingViewController.swift in Sources */,
+				81CF14C81FB25101004A9A7A /* SettingsViewController.swift in Sources */,
 				81CF14C51FB24D0F004A9A7A /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

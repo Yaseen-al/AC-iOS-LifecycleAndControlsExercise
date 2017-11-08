@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="hS5-2w-RwJ">
@@ -101,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="384.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="bfm-hJ-A9B">
             <objects>
-                <viewController id="FKn-OF-d9R" customClass="SettingViewController" customModule="LifecycleControls" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FKn-OF-d9R" customClass="SettingsViewController" customModule="LifecycleControls" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HR5-hn-Rtn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,9 +117,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJR-8U-gJH">
                                 <rect key="frame" x="5" y="297.5" width="365" height="369.5"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XiF-aU-mMY">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XiF-aU-mMY" userLabel="RedSlider">
                                         <rect key="frame" x="17" y="87" width="277" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="redSlider:" destination="FKn-OF-d9R" eventType="valueChanged" id="IKw-UH-gb9"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AN-xL-WXD">
                                         <rect key="frame" x="134" y="137" width="82" height="21"/>
@@ -123,9 +131,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="735" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fz8-Hh-dfS">
+                                    <slider opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="735" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fz8-Hh-dfS" userLabel="GreenSlider">
                                         <rect key="frame" x="30" y="166" width="281" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="GreenSlider:" destination="FKn-OF-d9R" eventType="valueChanged" id="wdv-sO-G87"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEF-D4-RA5">
                                         <rect key="frame" x="134" y="221" width="57" height="21"/>
@@ -134,9 +145,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="745" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yjB-x0-IbU">
+                                    <slider opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="745" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yjB-x0-IbU" userLabel="BlueSlider">
                                         <rect key="frame" x="30" y="274" width="281" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="blueSlider:" destination="FKn-OF-d9R" eventType="valueChanged" id="Y1W-v3-glJ"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-KQ-tUN">
                                         <rect key="frame" x="149" y="329" width="67" height="21"/>
@@ -155,32 +169,27 @@
                                         <rect key="frame" x="44" y="180" width="277" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
-                                            <segment title="lower"/>
-                                            <segment title="Upper"/>
+                                            <segment title="Capital"/>
                                             <segment title="Lower"/>
+                                            <segment title="Upper"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="fontSegmentedControll:" destination="FKn-OF-d9R" eventType="valueChanged" id="3Nq-r3-Nkd"/>
+                                        </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stepper output" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nB-Q3-yNS">
-                                        <rect key="frame" x="168" y="123" width="116" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number Of Rows" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQL-Xs-aO9">
-                                        <rect key="frame" x="44" y="123" width="106" height="21"/>
+                                        <rect key="frame" x="26" y="123" width="295" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XHY-5m-i32">
-                                        <rect key="frame" x="160" y="67" width="94" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </stepper>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSH-TO-iFx">
                                         <rect key="frame" x="199" y="24" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="alternatingCellSwitch:" destination="FKn-OF-d9R" eventType="valueChanged" id="rIR-dY-31n"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alternating Cells" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpT-Hs-Bo6">
                                         <rect key="frame" x="44" y="29" width="126" height="21"/>
@@ -189,6 +198,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XHY-5m-i32" userLabel="numberOfRows Stepper">
+                                        <rect key="frame" x="115" y="85" width="94" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="numberOfRowsStepper:" destination="FKn-OF-d9R" eventType="valueChanged" id="Vql-in-u0f"/>
+                                        </connections>
+                                    </stepper>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -208,6 +224,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tr3-8j-1yx"/>
                     </view>
+                    <connections>
+                        <outlet property="alternatingCellLabel" destination="ZpT-Hs-Bo6" id="x5s-Za-6By"/>
+                        <outlet property="blueLabel" destination="XlW-KQ-tUN" id="QeB-3r-jMX"/>
+                        <outlet property="fontSegmentedController" destination="5De-75-K2o" id="xsD-xb-Ety"/>
+                        <outlet property="greenLabel" destination="TEF-D4-RA5" id="xTt-aM-GWf"/>
+                        <outlet property="myStepper" destination="XHY-5m-i32" id="jvA-et-uO8"/>
+                        <outlet property="numberOfRowsLabel" destination="uQL-Xs-aO9" id="ENu-pN-wF4"/>
+                        <outlet property="redLabel" destination="7AN-xL-WXD" id="Grh-gI-cr3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ms5-A8-ibE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
